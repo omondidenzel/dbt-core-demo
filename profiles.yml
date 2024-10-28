@@ -1,0 +1,17 @@
+# For more information on how to configure this file, please see:
+# https://docs.getdbt.com/docs/profile
+
+dbt_core_demo:
+  outputs:
+    redshift_dev:
+      type: redshift
+      ra3_node: true
+      threads: 4
+      host: redshift-prod.bboxx-dwh.co.uk
+      port: 5439
+      user: d_omondi
+      pass: yoa8iechiuFieVoh
+      dbname: bboxx_dev_ci
+      schema: dev_denzel
+
+  target: redshift_dev
